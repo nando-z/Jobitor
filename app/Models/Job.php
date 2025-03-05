@@ -23,6 +23,6 @@ class Job extends Model
     }
      public function tags()
     {
-
+        return [];
     }
 }
