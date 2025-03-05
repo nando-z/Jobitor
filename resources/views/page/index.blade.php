@@ -26,15 +26,17 @@
     <div class="w-full  mt-20">
         <div class="p-4">
             <p class="font-bold text-2xl">Top Jobs</p>
-                <div class="flex  flex-wrap sm:items-center justify-center mt-7 md:flex-row flex-col gap-4">
+                <div class="flex  flex-wrap sm:items-center justify-start mt-7 md:flex-row flex-col gap-4">
                  <x-dark-card/>
                  <x-dark-card/>
                  <x-dark-card/>
                  <x-dark-card/>
-
+                 <x-dark-card/>
+                 <x-dark-card/>
             </div>
         </div>
      </div>
+
      {{-- Tags --}}
 
      <div class="w-full  mt-7">
@@ -70,6 +72,9 @@
         <div class="p-4">
             <p class="font-bold text-2xl">Find Jobs</p>
             <div class="flex w-full items-center mt-4 flex-wrap sm:flex-row gap-5">
+            <x-job-card/>
+            <x-job-card/>
+            <x-job-card/>
             <x-job-card/>
             <x-job-card/>
             <x-job-card/>
