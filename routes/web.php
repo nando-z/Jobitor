@@ -7,3 +7,4 @@ Route::view('/' , 'page.index')
 
 Route::view('/test' , 'page.index')
     ->name('test');
+
