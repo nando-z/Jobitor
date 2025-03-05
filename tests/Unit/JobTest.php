@@ -18,3 +18,12 @@ it('belongs to an employer', function() {
         ->toBeInstanceOf(Employer::class)
         ->and($job->employer->id)->toBe($employer->id);
 });
+
+it('Have an Tage', function() {
+    // Arrange
+    $job = Job::factory()->create();
+
+    $job->tag('Front End');
+
+    expect($job->tags)->toHaveCount(1);
+});
