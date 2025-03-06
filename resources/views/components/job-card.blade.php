@@ -34,7 +34,9 @@
 
         {{-- Time and Actions --}}
         <div class="w-full md:w-auto flex items-center justify-between gap-4">
-            <span class="text-sm text-gray-400 whitespace-nowrap">Posted 22h ago</span>
+            <span class="text-sm text-gray-400 whitespace-nowrap">Posted
+                {{ $job->updated_at->diffForHumans() }}
+            </span>
             <button class="btn btn-primary px-6 py-2 rounded-lg font-semibold">
                 Apply Now
             </button>
