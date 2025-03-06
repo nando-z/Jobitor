@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(\App\Models\Job::class)
                 ->constrained()
-                ->cascadeOnDelete()
-            ;
+                ->cascadeOnDelete();
             $table->foreignIdFor(\App\Models\Tag::class)
                 ->constrained()
                 ->cascadeOnDelete();

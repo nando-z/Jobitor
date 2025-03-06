@@ -46,10 +46,8 @@
         <div class="p-4">
             <p class="font-bold text-2xl">Tags</p>
             <div class="flex items-center mt-5 flex-wrap sm:flex-row gap-2">
-                @foreach ($jobs as $job )
-                <x-tags>
-                    {{ $job->title }}
-                </x-tags>
+                @foreach ($jobs as $job)
+                <x-tags :$job />
                 @endforeach
 
             </div>

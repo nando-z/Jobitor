@@ -1,1 +1,2 @@
-<button class="btn btn-dash rounded-4xl">{{$slot}}</button>
+@props(['job'])
+<button class="btn btn-dash rounded-4xl"></button>
