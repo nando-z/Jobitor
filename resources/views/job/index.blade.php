@@ -21,7 +21,7 @@
             <p class="font-bold text-2xl mb-7">Top Jobs</p>
             <div class="flex flex-wrap justify-start gap-6">
                 @foreach ($jobs as $job)
-                <x-dark-card :job="$job" />
+                <x-card :job="$job" />
                 @endforeach
             </div>
         </div>
