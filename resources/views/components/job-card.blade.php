@@ -1,12 +1,13 @@
+@props(['job'])
+
 <div class="w-full p-6 bg-white/6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
     <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
         {{-- Image --}}
         <div class="flex-none">
             <div class="avatar">
-                <div class="w-32 h-32 rounded-lg overflow-hidden"> <!-- Larger image container -->
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                         class="object-cover w-full h-full"
-                         alt="Microsoft logo" />
+                <div class="w-32 h-32 rounded-lg overflow-hidden">
+                    <!-- Larger image container -->
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" class="object-cover w-full h-full" alt="Microsoft logo" />
                 </div>
             </div>
         </div>
@@ -25,9 +26,9 @@
 
             {{-- Tags --}}
             <div class="flex flex-wrap gap-2">
-                <x-tags class="bg-gray-800 text-gray-300">Remote</x-tags>
-                <x-tags class="bg-gray-800 text-gray-300">Senior Level</x-tags>
-                <x-tags class="bg-blue-900/30 text-blue-400">New</x-tags>
+                @foreach ($jobs->tags as $tag)
+                <x-tags :$tag />
+                @endforeach
             </div>
         </div>
 
