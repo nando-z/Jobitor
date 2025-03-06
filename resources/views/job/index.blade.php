@@ -15,12 +15,13 @@
 
     {{-- Card --}}
 
-    <div class="w-full  mt-20">
+    {{-- Card Container --}}
+    <div class="w-full mt-20">
         <div class="p-4">
-            <p class="font-bold text-2xl">Top Jobs</p>
-            <div class="flex  flex-wrap sm:items-center justify-start mt-7 md:flex-row flex-col gap-4">
+            <p class="font-bold text-2xl mb-7">Top Jobs</p>
+            <div class="flex flex-wrap justify-start gap-6">
                 @foreach ($jobs as $job)
-                <x-dark-card />
+                <x-dark-card :job="$job" />
                 @endforeach
             </div>
         </div>
@@ -47,7 +48,7 @@
             <p class="font-bold text-2xl">Find Jobs</p>
             <div class="flex w-full items-center mt-4 flex-wrap sm:flex-row gap-5">
                 @foreach ($jobs as $job)
-                <x-job-card />
+                <x-job-card :$job />
                 @endforeach
 
             </div>

@@ -17,8 +17,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-        $tags = Tag::factory(10)->create();
-        Job::factory(10)->hasAttached($tags)->create();
+        $tags = Tag::factory(3)->create();
+        Job::factory(30)->hasAttached($tags)->create();
         // Employer::factory(10)->create();
 
     }
