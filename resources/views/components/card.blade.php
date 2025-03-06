@@ -3,7 +3,7 @@
     <div class="card-body">
         <!-- Employer Logo and Name -->
         <div class="flex items-center space-x-4">
-            <img src="{{ $job->employer_logo }}" alt="{{ $job->employer->name }}" class="w-12 h-12 sm:w-16 sm:h-16 rounded-full">
+            <img src="{{ $job->employer->logo }}" alt="{{ $job->employer->name }}" class="w-12 h-12 sm:w-16 sm:h-16 rounded-full">
             <div>
                 <h3 class="text-lg sm:text-xl font-bold">{{ $job->employer->name }}</h3>
                 <p class="text-sm sm:text-base text-gray-400">{{ $job->title }}</p>

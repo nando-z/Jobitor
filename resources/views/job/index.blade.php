@@ -23,6 +23,7 @@
                 @foreach ($jobs as $job)
                 <x-card :job="$job" />
                 @endforeach
+
             </div>
         </div>
     </div>
@@ -50,8 +51,9 @@
                 @foreach ($jobs as $job)
                 <x-job-card :$job />
                 @endforeach
-
+                {{ $jobs->links() }}
             </div>
         </div>
 
+        <x-footer />
 </x-layout>
