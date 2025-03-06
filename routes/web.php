@@ -2,9 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/' , 'page.index')
+// Route::get('/' , 'job.index')
+//     ->name('home');
+
+
+
+// Route::get('/test' , 'job.index')
+//     ->name('test');
+
+
+
+Route::get('/',[\App\Http\Controllers\JobController::class , 'index'])
     ->name('home');
-
-Route::view('/test' , 'page.index')
-    ->name('test');
-

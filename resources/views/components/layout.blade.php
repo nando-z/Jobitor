@@ -10,24 +10,24 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class=" mx-auto md:max-w-7xl container  p-2">
-    <x-navbar >
+     <x-navbar >
         <x-nav-link uri="home">
             Jobs
         </x-nav-link>
-        <x-nav-link uri="test">
+        <x-nav-link uri="home">
             Career
         </x-nav-link>
 
-        <x-nav-link uri="test">
+        <x-nav-link uri="home">
             Salaries
         </x-nav-link>
-        <x-nav-link uri="test">
+        <x-nav-link uri="home">
             Companies
         </x-nav-link>
-    </x-navbar>
+    </x-navbar> 
     <main>
         {{ $slot }}
     </main>
-    <x-footer/>
+    {{-- <x-footer/> --}}
 </body>
 </html>
