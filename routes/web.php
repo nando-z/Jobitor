@@ -29,3 +29,5 @@ Route::get('/companies', function () {
 Route::get('/create', function () {
     return 'Create';
 })->name('create');
+
+require_once 'auth.php';
