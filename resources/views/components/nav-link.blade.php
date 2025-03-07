@@ -1,4 +1,4 @@
-@props(['uri', 'tooltip' => ''])
+@props(['uri'=>'', 'tooltip' => ''])
 
 @php
 // Check if the current route matches the provided route

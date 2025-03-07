@@ -24,6 +24,9 @@
         <x-nav-link uri="companies">
             Companies
         </x-nav-link>
+        <x-slot:btn>
+            Create
+        </x-slot:btn>
     </x-navbar>
 
     <main>

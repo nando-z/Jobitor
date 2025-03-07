@@ -9,7 +9,8 @@
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class=" mx-auto md:max-w-7xl container  p-4">
+<body class=" mx-auto md:max-w-7xl container  p-10">
+
 
     <main>
         {{ $slot }}
