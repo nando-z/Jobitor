@@ -1,4 +1,4 @@
-@props(['slot'=>''])
+@props(['slot'=>'' ,'btn'=>''])
 <nav class="navbar border-gray-400/10 border-b-1 p-4">
     <div class="flex-0">
         <a class="btn btn-ghost text-2xl rounded-4xl">
@@ -12,6 +12,9 @@
         </div>
     </div>
 
+    <div class="flex gap-3">
+        {{ $btn }}
+    </div>
     <div class="flex-0">
         <div class="dropdown dropdown-end sm:hidden">
             <button tabindex="0" class="btn btn-soft btn-secondary m-1">Menu</button>
@@ -19,8 +22,6 @@
                 <li><a>{{ $slot }}</a></li>
             </ul>
         </div>
-        <div class="hidden sm:flex gap-3">
-            <button class="btn btn-primary rounded-4xl">Create</button>
-        </div>
+
     </div>
 </nav>

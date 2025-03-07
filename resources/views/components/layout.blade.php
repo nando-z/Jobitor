@@ -24,9 +24,20 @@
         <x-nav-link uri="companies">
             Companies
         </x-nav-link>
-        <x-slot:btn>
-            Create
-        </x-slot:btn>
+        @auth
+
+        <slot:btn>
+            <x-forms.button>
+                <a href="/jobs/creat">New Post</a>
+            </x-forms.button>
+
+        </slot:btn>
+
+        @endauth
+
+        @guest
+
+        @endguest
     </x-navbar>
 
     <main>
