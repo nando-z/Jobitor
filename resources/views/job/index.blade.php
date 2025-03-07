@@ -13,42 +13,40 @@
     </div>
 
     {{-- Card Container --}}
-    <div class="w-full mt-20">
-        <div class="p-4">
-            <p class="font-bold text-2xl mb-7">Top Jobs</p>
-            <div class="flex flex-wrap justify-start gap-6">
-                @foreach ($jobs as $job)
-                <x-card :job="$job" />
-                @endforeach
-            </div>
-        </div>
-    </div>
+    <x-panal>
+        <x-slot name="title">
+            Featured Jobs
+        </x-slot>
+        @foreach ($jobs as $job)
+        <x-card :job="$job" />
+        @endforeach
+    </x-panal>
 
     {{-- Tags --}}
-    <div class="w-full mt-20">
-        <div class="p-4">
-            <p class="font-bold text-2xl">Tags</p>
-            <div class="flex items-center mt-5 flex-wrap sm:flex-row gap-2">
-                @foreach ($tags as $tag)
-                <x-tags :tag="$tag" />
-                @endforeach
-            </div>
-        </div>
-    </div>
+
+    <x-panal>
+        <x-slot name="title">
+            Tags
+        </x-slot>
+        @foreach ($tags as $tag)
+        <x-tags :tag="$tag" />
+        @endforeach
+    </x-panal>
+
 
     {{-- Find Jobs --}}
-    <div class="w-full mt-20">
-        <div class="p-4">
-            <p class="font-bold text-2xl">Find Jobs</p>
-            <div class="flex w-full items-center mt-4 flex-wrap sm:flex-row gap-5">
-                @foreach ($jobs as $job)
-                <x-job-card :job="$job" />
-                @endforeach
-                <div class="w-full mt-4">
-                    {{ $jobs->links() }}
-                </div>
-            </div>
-        </div>
+
+    <x-panal>
+        <x-slot:title>
+            Find Jobs
+        </x-slot:title>
+        @foreach ($jobs as $job)
+        <x-job-card :job="$job" />
+        @endforeach
+    </x-panal>
+
+    <div class="w-full mt-7">
+        {{ $jobs->links() }}
     </div>
 
     <x-footer />

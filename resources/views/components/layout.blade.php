@@ -9,22 +9,22 @@
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class=" mx-auto md:max-w-7xl container  p-2">
-     <x-navbar >
-        <x-nav-link uri="home">
+<body class=" mx-auto md:max-w-7xl container  p-4">
+    <x-navbar>
+        <x-nav-link uri="jobs">
             Jobs
         </x-nav-link>
-        <x-nav-link uri="home">
+        <x-nav-link uri="careers">
             Career
         </x-nav-link>
 
-        <x-nav-link uri="home">
+        <x-nav-link uri="salaries">
             Salaries
         </x-nav-link>
-        <x-nav-link uri="home">
+        <x-nav-link uri="companies">
             Companies
         </x-nav-link>
-    </x-navbar> 
+    </x-navbar>
     <main>
         {{ $slot }}
     </main>

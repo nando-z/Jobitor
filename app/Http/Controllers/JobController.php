@@ -16,11 +16,10 @@ class JobController extends Controller
     {
         $jobs = Job::with(['tags', 'employer'])->paginate(6);
 
-        return $jobs;
-        // return view('job.index', [
-        //     'jobs' => $jobs,
-        //     'tags' => Tag::paginate(20),
-        // ]);
+        return view('job.index', [
+            'jobs' => $jobs,
+            'tags' => Tag::paginate(20),
+        ]);
 
     }
 
