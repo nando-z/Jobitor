@@ -17,7 +17,7 @@
         <x-slot name="title">
             Featured Jobs
         </x-slot>
-        @foreach ($jobs as $job)
+        @foreach ($featuredJobs as $job)
         <x-card :job="$job" />
         @endforeach
     </x-panal>
@@ -46,7 +46,7 @@
     </x-panal>
 
     <div class="w-full mt-7">
-        {{ $jobs->links() }}
+        {{-- {{ $jobs->links() }} --}}
     </div>
 
     <x-footer />
