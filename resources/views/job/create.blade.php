@@ -1,4 +1,4 @@
-<x-auth-layout>
+<x-layout>
     <x-page-heading>
 
         Create New Job
@@ -24,4 +24,4 @@
         </x-forms.button>
     </x-forms.form>
 
-</x-auth-layout>
+</x-layout>
