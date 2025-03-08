@@ -7,14 +7,15 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
-        --container-8xl: 96rem;
-    }
+    --container-8xl: 96rem;
+}
 
 @plugin "daisyui" {
-        themes: light --default, dark --prefersdark;
-      }
+    themes: black --default;
+}
 
 
-body, html{
+body,
+html {
     background: #000;
 }

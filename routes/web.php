@@ -9,9 +9,11 @@ Route::get('/', [JobController::class, 'index'])->name('home');
 Route::get('/search', SearchController::class);
 Route::get('/tags/{tag:name}', TagController::class);
 
-Route::get('/jobs', function () {
-    return 'Jobs';
-})->name('jobs');
+// Create Job Auth
+Route::middleware('auth')->group(function () {
+    Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
+    Route::post('/jobs', [JobController::class, 'store'])->name('jobs.store');
+});
 
 Route::get('/careers', function () {
     return 'Careers';

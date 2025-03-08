@@ -1,9 +1,27 @@
 <x-auth-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Create Job') }}
-        </h2>
-    </x-slot>
+    <x-page-heading>
 
-    <x-jobs.form :action="route('jobs.store')" method="POST" :job="new App\Models\Job" />
+        Create New Job
+    </x-page-heading>
+
+    {{-- Form --}}
+
+    <x-forms.form method="POST" action='/jobs'>
+        <x-forms.input label="Title" name="title" placeholder="CEO" />
+        <x-forms.input label="Salary" name="salary" placeholder="$90.000 USD" />
+        <x-forms.input label="Location" name="location" placeholder="Djbuti , Djbuti" />
+        <x-forms.select label="Schedule" name="schedule">
+            <option> Part Time</option>
+            <option> Full Time</option>
+        </x-forms.select>
+        {{-- Links and Tags --}}
+        <x-forms.input label="URL" name="url" placeholder="https://jobitor.com" />
+        <x-forms.checkbox label="Featured (Cost Extra)" name="featured" />
+        <x-forms.divider />
+        <x-forms.input label="Tags (comma separated)" name="tags" placeholder="backend, front-end , Ux , UI" />
+        <x-forms.button>
+            Publish
+        </x-forms.button>
+    </x-forms.form>
+
 </x-auth-layout>
