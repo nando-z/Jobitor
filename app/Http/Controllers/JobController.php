@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreJobRequest;
-use App\Http\Requests\UpdateJobRequest;
 use App\Models\Job;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +14,6 @@ class JobController extends Controller
     {
 
         $jobs = Job::with(['tags', 'employer'])->get()->groupBy('featured');
-        // $jobs = Job::all()->groupBy('featured');
 
         return view('job.index', [
             'featuredJobs' => $jobs[0],
@@ -24,11 +22,11 @@ class JobController extends Controller
         ]);
 
     }
+
     public function create()
     {
         return view('job.create');
     }
-
 
     public function store(StoreJobRequest $request)
     {
@@ -52,6 +50,4 @@ class JobController extends Controller
 
         return redirect()->route('home')->with('success', 'Job created successfully.');
     }
-
-
 }
