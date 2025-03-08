@@ -1,7 +1,7 @@
 @props(['slot'=>''])
 <nav class="navbar flex justify-between border-gray-400/10 border-b-1 p-4">
     <div class="flex-0">
-        <a class="btn btn-ghost text-2xl rounded-4xl">
+        <a href="/" class="btn btn-ghost text-2xl rounded-4xl">
             {{ env("APP_NAME") }}
         </a>
     </div>
