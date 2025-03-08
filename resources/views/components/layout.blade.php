@@ -11,32 +11,21 @@
 </head>
 <body class=" mx-auto md:max-w-7xl container  p-4">
     <x-navbar>
-        <x-nav-link uri="jobs">
-            Jobs
-        </x-nav-link>
-        <x-nav-link uri="careers">
-            Career
-        </x-nav-link>
-
-        <x-nav-link uri="salaries">
-            Salaries
-        </x-nav-link>
-        <x-nav-link uri="companies">
-            Companies
-        </x-nav-link>
+        <a href="#">Jobs</a>
+        <a href="#">Career</a>
+        <a href="#">Salaries</a>
+        <a href="#">Companies</a>
         @auth
 
-        <slot:btn>
-            <x-forms.button>
-                <a href="/jobs/creat">New Post</a>
-            </x-forms.button>
-
-        </slot:btn>
+        <a href="/jobs/create" class="btn btn-accent rounded-4xl">
+            Post a Job
+        </a>
 
         @endauth
 
         @guest
-
+        <a href="{{ route('register') }}">Sign Up</a>
+        <a href="{{ route('login') }}">Login</a>
         @endguest
     </x-navbar>
 

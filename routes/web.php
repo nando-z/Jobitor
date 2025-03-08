@@ -1,15 +1,13 @@
 <?php
 
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/' , 'job.index')
-//     ->name('home');
-
-// Route::get('/test' , 'job.index')
-//     ->name('test');
-
-Route::get('/', [\App\Http\Controllers\JobController::class, 'index'])
-    ->name('home');
+Route::get('/', [JobController::class, 'index'])->name('home');
+Route::get('/search', SearchController::class);
+Route::get('/tags/{tag:name}', TagController::class);
 
 Route::get('/jobs', function () {
     return 'Jobs';
@@ -30,4 +28,4 @@ Route::get('/create', function () {
     return 'Create';
 })->name('create');
 
-require_once 'auth.php';
+require_once __DIR__.'/auth.php';

@@ -1,20 +1,18 @@
-@props(['slot'=>'' ,'btn'=>''])
-<nav class="navbar border-gray-400/10 border-b-1 p-4">
+@props(['slot'=>''])
+<nav class="navbar flex justify-between border-gray-400/10 border-b-1 p-4">
     <div class="flex-0">
         <a class="btn btn-ghost text-2xl rounded-4xl">
             {{ env("APP_NAME") }}
         </a>
     </div>
 
-    <div class="flex-1 ml-5 flex justify-center items-center gap-4">
-        <div class="hidden sm:flex gap-3">
+    <div class=" ml-5 flex justify-center items-center gap-4">
+        <div class="hidden sm:flex space-x-7 font-bold">
             {{ $slot }}
         </div>
     </div>
 
-    <div class="flex gap-3">
-        {{ $btn }}
-    </div>
+
     <div class="flex-0">
         <div class="dropdown dropdown-end sm:hidden">
             <button tabindex="0" class="btn btn-soft btn-secondary m-1">Menu</button>
