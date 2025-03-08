@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreJobRequest;
 use App\Models\Job;
 use App\Models\Tag;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
@@ -42,7 +43,7 @@ class JobController extends Controller
         );
         $data['featured'] = $request->has('featured');
 
-        $job = Auth::user()->employer->jobs()->create([$data]);
+        $job = Auth::user()->employer->jobs()->create(Arr::except($data, 'tags'));
 
         if (isset($data['tags'])) {
             $job->tags()->attach($data['tags']);
