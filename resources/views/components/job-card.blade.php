@@ -7,7 +7,8 @@
             <div class="avatar">
                 <div class="w-32 h-32 rounded-lg overflow-hidden">
                     <!-- Larger image container -->
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" class="object-cover w-full h-full" alt="Microsoft logo" />
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                        class="object-cover w-full h-full" alt="Microsoft logo" />
                 </div>
             </div>
         </div>
@@ -15,27 +16,33 @@
         {{-- Main Content --}}
         <div class="flex-1 space-y-3 ">
             <div class="space-y-1">
-                <p class="text-sm font-medium group-hover:text-amber-300 transition-colors duration-300 text-gray-400">{{ $job->employer->name }}</p>
+                <p class="text-sm font-medium group-hover:text-amber-300 transition-colors duration-300 text-gray-400">
+                    {{ $job->employer->name }}</p>
                 <h2 class="text-2xl font-bold  text-white">{{ $job->title }}</h2>
                 <div class="flex items-center gap-2 text-sm">
                     <span class="text-gray-400">{{ $job->schedule }}</span>
                     <span class="text-gray-500">•</span>
-                    <span class="text-primary-400 group-hover:text-green-300 transition-colors duration-300 font-medium">From {{ $job->salary }}</span>
-                    <span class="text-primary-400 font-medium group-hover:text-rose-500 transition-colors duration-300">From {{ $job->location }}</span>
+                    <span
+                        class="text-primary-400 group-hover:text-green-300 transition-colors duration-300 font-medium">From
+                        {{ $job->salary }}</span>
+                    <span
+                        class="text-primary-400 font-medium group-hover:text-rose-500 transition-colors duration-300">From
+                        {{ $job->location }}</span>
                 </div>
             </div>
 
             {{-- Tags --}}
             <div class="flex flex-wrap gap-2">
                 @foreach ($job->tags as $tag)
-                <x-tags :$tag />
+                    <x-tags :$tag />
                 @endforeach
             </div>
         </div>
 
         {{-- Time and Actions --}}
         <div class="w-full md:w-auto flex items-center justify-between gap-4">
-            <span class="text-sm text-gray-400 whitespace-nowrap group-hover:text-blue-500 transition-colors duration-300 ">Posted
+            <span
+                class="text-sm text-gray-400 whitespace-nowrap group-hover:text-blue-500 transition-colors duration-300 ">Posted
                 {{ $job->updated_at->diffForHumans() }}
             </span>
             <button class="btn btn-primary px-6 py-2 hover:bg-indigo-600 rounded-lg font-semibold">
