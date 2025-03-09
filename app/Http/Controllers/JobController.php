@@ -32,10 +32,10 @@ class JobController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'title' => ['required', 'string', 'max:255'],
-            'salary' => ['required', 'string', 'max:255'],
+            'title' => ['required', 'string', 'max:30'],
+            'salary' => ['required', 'string', 'max:8'],
             'location' => ['required', 'string', 'max:255'],
-            'schedule' => ['required', 'string', 'max:255', Rule::in(['Part Time', 'Full Time'])],
+            'schedule' => ['required', 'string', Rule::in(['Part Time', 'Full Time'])],
             'url' => ['required', 'active_url', 'max:255'],
             'tags' => ['nullable'],
         ]);
@@ -43,10 +43,11 @@ class JobController extends Controller
 
         $job = Auth::user()->employer->jobs()->create(Arr::except($data, 'tags'));
 
-        if ($data['tags' ?? false]) {
+        if ($data['tags'] ?? false) {
             // frontend , front-end
-            foreach (explode(',', $data['tags']) as $tag) {
-                $job->tags($tag);
+            foreach (explode(',', $data['tags']) as $tagName) {
+                $tag = Tag::firstOrCreate(['name' => trim($tagName)]);
+                $job->tags()->attach($tag);
             }
         }
 

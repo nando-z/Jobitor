@@ -1,6 +1,6 @@
 @props(['job'])
 
-<div class="w-full p-6 bg-white/6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+<div class="w-full p-6 group bg-white/6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
     <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
         {{-- Image --}}
         <div class="flex-none">
@@ -13,15 +13,15 @@
         </div>
 
         {{-- Main Content --}}
-        <div class="flex-1 space-y-3">
+        <div class="flex-1 space-y-3 ">
             <div class="space-y-1">
-                <p class="text-sm font-medium text-gray-400">{{ $job->employer->name }}</p>
-                <h2 class="text-2xl font-bold text-white">{{ $job->title }}</h2>
-                <p class="text-sm font-medium text-gray-400">{{ $job->employer->location }}</p>
+                <p class="text-sm font-medium group-hover:text-amber-300 transition-colors duration-300 text-gray-400">{{ $job->employer->name }}</p>
+                <h2 class="text-2xl font-bold  text-white">{{ $job->title }}</h2>
                 <div class="flex items-center gap-2 text-sm">
                     <span class="text-gray-400">{{ $job->schedule }}</span>
                     <span class="text-gray-500">•</span>
-                    <span class="text-primary-400 font-medium">From {{ $job->salary }}</span>
+                    <span class="text-primary-400 group-hover:text-green-300 transition-colors duration-300 font-medium">From {{ $job->salary }}</span>
+                    <span class="text-primary-400 font-medium group-hover:text-rose-500 transition-colors duration-300">From {{ $job->location }}</span>
                 </div>
             </div>
 
@@ -35,10 +35,10 @@
 
         {{-- Time and Actions --}}
         <div class="w-full md:w-auto flex items-center justify-between gap-4">
-            <span class="text-sm text-gray-400 whitespace-nowrap">Posted
+            <span class="text-sm text-gray-400 whitespace-nowrap group-hover:text-blue-500 transition-colors duration-300 ">Posted
                 {{ $job->updated_at->diffForHumans() }}
             </span>
-            <button class="btn btn-primary px-6 py-2 rounded-lg font-semibold">
+            <button class="btn btn-primary px-6 py-2 hover:bg-indigo-600 rounded-lg font-semibold">
                 Apply Now
             </button>
         </div>
