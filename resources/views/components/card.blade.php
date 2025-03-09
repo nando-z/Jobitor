@@ -1,13 +1,13 @@
 @props(['job'])
 
-<div class="card bg-white/6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex-1 min-w-[250px] max-w-[350px] sm:min-w-[300px] sm:max-w-[400px]">
+<div class="card  bg-white/6 shadow-lg hover:shadow-xl rounded-2xl group transition-shadow duration-300 flex-1 min-w-[250px] max-w-[350px] sm:min-w-[300px] sm:max-w-[400px]">
     <div class="card-body">
         {{-- Employer Logo and Name  --}}
         <div class="flex items-center space-x-4">
-            <img src="{{ $job->employer->logo }}" alt="{{ $job->employer->name }}" class="w-12 h-12 sm:w-16 sm:h-16 rounded-full">
+            <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="{{ $job->employer->name }}" class="w-12 h-12 sm:w-16 sm:h-16 rounded-full">
             <div>
-                <h3 class="text-lg sm:text-xl font-bold">{{ $job->employer->name }}</h3>
-                <p class="text-sm sm:text-base text-gray-400">{{ $job->title }}</p>
+                <h3 class="text-lg sm:text-xl group-hover:text-indigo-600 duration-200 font-bold">{{ $job->employer->name }}</h3>
+                <p class="text-sm sm:text-base  text-gray-400">{{ $job->title }}</p>
             </div>
         </div>
 
@@ -20,7 +20,7 @@
 
         {{-- Optional --}}
         <div class="mt-6">
-            <a href="#" class="btn btn-primary btn-sm sm:btn-md">View Job</a>
+            <a href="#" class="btn btn-primary rounded-3xl  duration-200 group-hover:bg-indigo-600 btn-sm sm:btn-md">View Job</a>
         </div>
     </div>
 </div>

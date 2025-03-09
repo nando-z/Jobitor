@@ -1,24 +1,17 @@
-@props(['slot'=>''])
-<nav class="navbar flex justify-between border-gray-400/10 border-b-1 p-4">
-    <div class="flex-0">
-        <a href="/" class="btn btn-ghost text-2xl rounded-4xl">
-            {{ env("APP_NAME") }}
-        </a>
-    </div>
+@props(['slot' => ''])
 
-    <div class=" ml-5 flex justify-center items-center gap-4">
-        <div class="hidden sm:flex space-x-7 font-bold">
-            {{ $slot }}
+<nav class="px-4 sm:px-6 lg:px-8 py-4 border-b border-white/10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+            <a href="/" class="text-2xl font-bold ">
+                {{ env("APP_NAME") }}
+            </a>
         </div>
-    </div>
 
-
-    <div class="flex-0">
-        <div class="dropdown dropdown-end sm:hidden">
-            <button tabindex="0" class="btn btn-soft btn-secondary m-1">Menu</button>
-            <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow-lg">
-                <li><a>{{ $slot }}</a></li>
-            </ul>
+        <!-- Main Navigation -->
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-12 w-full md:w-auto">
+            {{ $slot }}
         </div>
 
     </div>

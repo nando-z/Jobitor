@@ -13,9 +13,3 @@
 @plugin "daisyui" {
     themes: black --default;
 }
-
-
-body,
-html {
-    background: #000;
-}

@@ -43,8 +43,11 @@ class JobController extends Controller
 
         $job = Auth::user()->employer->jobs()->create(Arr::except($data, 'tags'));
 
-        if (isset($data['tags'])) {
-            $job->tags()->attach($data['tags']);
+        if ($data['tags' ?? false]) {
+            // frontend , front-end
+            foreach (explode(',', $data['tags']) as $tag) {
+                $job->tags($tag);
+            }
         }
 
         return redirect()->route('home')->with('success', 'Job created successfully.');

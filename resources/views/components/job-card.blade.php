@@ -17,6 +17,7 @@
             <div class="space-y-1">
                 <p class="text-sm font-medium text-gray-400">{{ $job->employer->name }}</p>
                 <h2 class="text-2xl font-bold text-white">{{ $job->title }}</h2>
+                <p class="text-sm font-medium text-gray-400">{{ $job->employer->location }}</p>
                 <div class="flex items-center gap-2 text-sm">
                     <span class="text-gray-400">{{ $job->schedule }}</span>
                     <span class="text-gray-500">•</span>

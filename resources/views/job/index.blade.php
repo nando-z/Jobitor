@@ -6,7 +6,7 @@
                 <!-- Centering the content -->
                 <h1 class="text-5xl font-bold">Let's Find You A Great Job</h1>
                 <div class="mt-7">
-                    {{-- <x-search-bar /> --}}
+
                     <x-forms.form action="/search">
                         <x-forms.input :label='false' name="q" placeholder="Web Development..." />
 
