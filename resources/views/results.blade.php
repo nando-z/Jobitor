@@ -7,5 +7,11 @@
         @foreach ($jobs as $job)
             <x-job-card :$job />
         @endforeach
+
+        @if ($jobs instanceof \Illuminate\Pagination\LengthAwarePaginator)
+            {{ $jobs->links() }}
+        @endif
+
     </div>
+
 </x-layout>
