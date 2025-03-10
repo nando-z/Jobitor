@@ -18,7 +18,7 @@
         <x-forms.input label="URL" name="url" placeholder="https://jobitor.com" />
         <x-forms.checkbox label="Featured (Cost Extra)" name="featured" />
         <x-forms.divider />
-        <x-forms.input label="Tags (comma separated)" name="tags" placeholder="backend, front-end , Ux , UI" />
+        <x-forms.input label="Tags (comma separated)" name="tags" placeholder="back-end, front-end , UX " />
         <x-forms.button>
             Publish
         </x-forms.button>

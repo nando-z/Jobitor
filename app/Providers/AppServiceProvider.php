@@ -10,7 +10,7 @@ class AppServiceProvider extends ServiceProvider
     {
         \Illuminate\Database\Eloquent\Model::unguard();
         \Illuminate\Pagination\Paginator::defaultView('vendor.pagination.tailwind');
-        \Illuminate\Database\Eloquent\Model::shouldBeStrict(! app()->isProduction());
+
     }
 
     /**

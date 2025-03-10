@@ -51,8 +51,8 @@
 
     <div class="w-full mt-7">
         {{-- {{ $jobs->links() }} --}}
+        <x-footer />
     </div>
 
-    <x-footer />
 
 </x-layout>
