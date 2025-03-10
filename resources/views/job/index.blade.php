@@ -22,7 +22,7 @@
             Featured Jobs
         </x-slot>
         @foreach ($featuredJobs as $job)
-        <x-card :job="$job" />
+            <x-card :job="$job" />
         @endforeach
     </x-panal>
 
@@ -33,7 +33,7 @@
             Tags
         </x-slot>
         @foreach ($tags as $tag)
-        <x-tags :tag="$tag" />
+            <x-tags :tag="$tag" />
         @endforeach
     </x-panal>
 
@@ -45,10 +45,9 @@
             Find Jobs
         </x-slot:title>
         @foreach ($jobs as $job)
-        <x-job-card :job="$job" />
+            <x-job-card :job="$job" />
         @endforeach
     </x-panal>
-
     <div class="w-full mt-7">
         {{-- {{ $jobs->links() }} --}}
         <x-footer />
