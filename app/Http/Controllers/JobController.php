@@ -13,7 +13,7 @@ class JobController extends Controller
 {
     public function index()
     {
-        $jobs = Job::with(['tags', 'employer', 'jobs'])->get()->groupBy('featured');
+        $jobs = Job::with(['tags', 'employer'])->get()->groupBy('featured');
 
         $tags = Tag::get();
 

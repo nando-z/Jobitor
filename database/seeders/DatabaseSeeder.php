@@ -22,8 +22,9 @@ class DatabaseSeeder extends Seeder
             new Sequence(
 
                 [
-                    'featured' => true,
+                    'featured' => false,
                 ]
+
 
             )
         );
